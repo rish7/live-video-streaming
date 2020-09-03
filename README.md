@@ -15,7 +15,7 @@ Preview image
 ___
 Preview of WebSocket data as it is
 ![Preview](preview.png)
-Preview of WebSocket data
+Preview of WebSocket data and modify using ffmpeg
 ![Preview](ffmpeg-preview.png)
 
 
