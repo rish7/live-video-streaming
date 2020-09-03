@@ -1,21 +1,25 @@
-#Live Video Streaming
+Live Video Streaming
 ---
 ___
 This is demo app for **live video streaming**. Only for basic idea how we can stream live video using **WebSocket**. 
 
-##Install steps
+Install steps
 ---
 ___
 * Download the code as zip or clone it.
 * run ```npm install``` on root directory
 * run ```npm start``` to start the application (or use VS Code debug to launch with debug)
 
-###Preview image
+Preview image
 ---
 ___
+Preview of WebSocket data as it is
 ![Preview](preview.png)
+Preview of WebSocket data
+![Preview](ffmpeg-preview.png)
 
-###To use ffmpeg
+
+To use ffmpeg
 ---
 ___
 Comment below lines of code in **server.js**
