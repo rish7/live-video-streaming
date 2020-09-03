@@ -36,4 +36,4 @@ Uncomment the code below line of code in **[server.js](https://github.com/rish7/
 ffmpeg.stdin.write(data);
 ```
 
-**Note:- This is just a demo application, did not handle socket connections. And also there is a deply of stream video. If we use ffmpeg to modify video it will take bit more time. WebRTC or RTMP media servers will give low latency.** 
+**Note:- This is just a demo application, did not handle socket connections. And also there is a delay of stream video. If we use ffmpeg to modify video it will take bit more delay. If we go for WebRTC or RTMP media servers will give low latency.** 
