@@ -6,7 +6,7 @@ This is demo app for **live video streaming**. Only for basic idea how we can st
 Install steps
 ---
 ___
-* Download the code as zip or clone it.
+* Download the [code as zip](https://codeload.github.com/rish7/live-video-streaming/zip/master) or [clone](https://github.com/rish7/live-video-streaming.git) it.
 * run ```npm install``` on root directory
 * run ```npm start``` to start the application (or use VS Code debug to launch with debug)
 
@@ -22,7 +22,7 @@ Preview of WebSocket data and modify using ffmpeg
 To use ffmpeg
 ---
 ___
-Comment below lines of code in **server.js**
+Comment below lines of code in **[server.js](https://github.com/rish7/live-video-streaming/blob/master/server.js#L46-L48)**
 ```javascript
 /*
 for (var client in clients){
@@ -31,7 +31,7 @@ for (var client in clients){
 */
 ```
 
-Uncomment the code below line of code in **server.js**
+Uncomment the code below line of code in **[server.js](https://github.com/rish7/live-video-streaming/blob/master/server.js#L51)**
 ```javascript
 ffmpeg.stdin.write(data);
 ```
