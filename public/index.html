@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    WebCam:
+    <video id="myvideo"></video>
+    Remote:
+    <video id="video-streaming" controls></video>
+    <script src="client.js" ></script>
+    <script>
+        var constraints = { audio: true, video: { width: 500, height: 400 } };
+        var mediaRecorder;
+        var chunks = [];
+        navigator.mediaDevices.getUserMedia(constraints)
+            .then(function (mediaStream) {
+                var video = document.querySelector('video');
+                video.srcObject = mediaStream;
+                mediaRecorder = new MediaRecorder(mediaStream);
+                video.onloadedmetadata = function (e) {
+                    video.play();
+                };
+                mediaRecorder.ondataavailable = function (e) {
+                    //console.log('Data', e.data);
+                    ws.send(e.data);
+                }
+                mediaRecorder.start(50)
+                setTimeout(()=>{getHttpStreaming()}, 0)
+            })
+            .catch(function (err) { console.log(err.name + ": " + err.message); });
+
+        function getHttpStreaming() {
+            console.log("Getting streaming");
+            var d = new Date();
+            var n = d.getTime();
+            audio = document.getElementById('video-streaming');
+            audio.src = 'http://localhost:3000/api/video?' + n;
+            audio.load();
+            audio.play();
+        }
+    </script>
+</body>
+
+</html>
